@@ -1,0 +1,1110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Amalfi Italian Restaurant | Fresh & Authentic</title>
+    
+    <link href="https://fonts.googleapis.com/css2?family=Arvo:wght@400;700&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css"> 
+</head>
+<body>
+
+        <nav class="navbar navbar-expand-lg sticky-top">
+            <div class="container">
+               <div class="container">
+        <a class="navbar-brand" href="#">
+            <img src="images/logo.png" alt="Amalfi Logo">
+            <span class="brand-text">AMALFI</span>
+        </a>
+        </div>
+                <div class="ms-auto d-flex align-items-center">
+                    <a href="#" class="nav-link mx-3">Home</a>
+                    <a href="#about" class="nav-link mx-3">Our Story</a>
+                    <a href="#menu" class="nav-link mx-3">Menu</a>
+                   <a href="#footer" target="_blank"class="nav-link mx-3">Contact</a>
+                <a href="https://wa.me/918668023282?text=Hi,%20I%20want%20to%20order%20food%20from%20Amalfi."class="btn btn-warning fw-bold px-4 rounded-pill ms-3 shadow">Order Online</a>
+
+                </div>
+            </div>
+        </nav>
+
+    <section class="hero">
+        <div class="container">
+            <h1 class="display-1 fw-bold">Authentic <span>Italian</span> <br> Fine Dining</h1>
+            <p class="lead mt-3 fs-3 fw-light">A Taste of the Amalfi Coast in Puducherry.</p>
+            <a href="#menu" class="btn btn-warning btn-lg mt-4 px-5 rounded-pill fw-bold">Explore Menu</a>
+        </div>
+    </section>
+
+    <section class="welcome-section p-0" id="about">
+        <div class="container-fluid p-0">
+            <div class="row align-items-center g-0">
+                <div class="col-lg-6 d-flex">
+                    <img src="images/it.jpg" alt="Special Dish" class="img-fluid w-100 vh-100 main-zoom" style="object-fit: cover; border-radius: 0 20px 20px 0; cursor: pointer;" onclick="openModal(this.src)">
+                </div>
+
+                <div class="col-lg-6 ps-lg-5 py-5 px-4 mt-5 mt-lg-0">
+                    <h3 class="welcome-title text-warning">The Amalfi Signature Quartet</h3> 
+                    <p class="mt-4 lead fw-normal text-white" style="font-size: 1.15rem; letter-spacing: 0.5px; border-left: 3px solid var(--lemon-yellow); padding-left: 15px;">
+                        A symphony of coastal <b>Prawn Linguine</b>, rustic <b>Chicken Al Mattone</b>, crunchy <b>Mushroom Fritti</b>, and refreshing <b>Green Apple Mojito</b>—crafted for the ultimate Italian soul.
+                    </p>
+                    <div class="row g-4 mt-4"> 
+                        <div class="col-6 reveal-card delay-1">
+                            <div class="p-3 border border-secondary rounded-3 shadow text-center bg-dark dish-card" onclick="openModal('images/PL.jpeg')">
+                                <img src="images/PL.jpeg" alt="Prawn Linguine" class="img-fluid rounded mb-3 zoom-img" style="height: 160px; width: 100%; object-fit: cover;">
+                                <h5 class="mb-0 text-warning">Prawn Linguine</h5>
+                            </div>
+                        </div>
+
+                        <div class="col-6 reveal-card delay-2">
+                            <div class="p-3 border border-secondary rounded-3 shadow text-center bg-dark dish-card" onclick="openModal('images/CA.jpeg')">
+                                <img src="images/CA.jpeg" alt="Chicken Al Mattone" class="img-fluid rounded mb-3 zoom-img" style="height: 160px; width: 100%; object-fit: cover;">
+                                <h5 class="mb-0 text-warning">Chicken Al Mattone</h5>
+                            </div>
+                        </div>
+
+                        <div class="col-6 reveal-card delay-3">
+                            <div class="p-3 border border-secondary rounded-3 shadow text-center bg-dark dish-card" onclick="openModal('images/GA.jpeg')">
+                                <img src="images/GA.jpeg" alt="Green Apple Mojito" class="img-fluid rounded mb-3 zoom-img" style="height: 160px; width: 100%; object-fit: cover;">
+                                <h5 class="mb-0 text-warning">Green Apple Mojito</h5>
+                            </div>
+                        </div>
+
+                        <div class="col-6 reveal-card delay-4">
+                            <div class="p-3 border border-secondary rounded-3 shadow text-center bg-dark dish-card" onclick="openModal('images/mf.jpg')">
+                                <img src="images/mushroom fr.jpeg" alt="Mushroom Fritti" class="img-fluid rounded mb-3 zoom-img" style="height: 160px; width: 100%; object-fit: cover;">
+                                <h5 class="mb-0 text-warning">Mushroom Fritti</h5>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div id="imageModal" class="img-modal" onclick="closeModal()">
+        <span class="close-btn">&times;</span>
+        <img class="modal-content" id="fullImage">
+    </div>
+
+    <section class="menu-section" id="menu">
+        <div class="container py-5">
+            <div class="text-center mb-5">
+                <h2 class="welcome-title">Our Menu Categories</h2>
+                <p class="text-white-50">Explore our authentic Italian selection</p>
+            </div>
+            
+            <div class="row text-center g-4">
+                <div class="col-md-4">
+    <div class="category-card shadow" onclick="openFullMenu()" style="cursor: pointer;">
+        <img src="images/caesarr.jpeg" alt="Antipasti" class="img-fluid w-100" 
+             style="height: 250px; object-fit: cover; object-position: center 25%; transform: scale(1.1);">
+        <h3>Antipasti</h3>
+        <p class="px-3">Traditional Italian appetizers to start your meal.</p>
+        
+        <span class="btn text-success fw-bold mb-3">Explore &rarr;</span>
+    </div>
+</div>
+
+                <div id="fullMenuOverlay" class="full-menu-overlay">
+                    <button class="sticky-close-btn" onclick="closeFullMenu()">
+        <i class="fas fa-times"></i>
+    </button>
+                    <div class="container py-5 menu-book-animation"> 
+                        <h2 class="text-center welcome-title text-warning mb-5">Antipasti Selection</h2>
+                        
+                        <div class="row g-4 mb-5">
+                            <div class="col-md-4">
+                                <div class="menu-item-box p-3">
+                                    <img src="images/caesarr.jpeg" class="img-fluid rounded mb-3" alt="Caesar Salad" style="height: 200px; width: 100%; object-fit: cover;">
+                                    <div class="d-flex justify-content-between align-items-center">
+                                        <h4 class="text-white">Caesar Salad</h4>
+                                        <span class="text-warning fw-bold">₹180</span>
+                                    </div>
+                                    <p class="small text-white-50">Crisp romaine lettuce, endive, crunchy croutons, parmesan, onion & Caesar dressing</p>
+                               <button class="btn btn-warning w-100 mt-2 fw-bold" onclick="addToCart('Caesar Salad', 180)">
+    Add to Cart
+</button>
+                                </div>
+                            </div>
+
+                            <div class="col-md-4">
+                                <div class="menu-item-box p-3">
+                                    <img src="images/Pesto Chicken Salad.jpeg" class="img-fluid rounded mb-3" alt="Pesto Chicken" style="height: 200px; width: 100%; object-fit: cover;">
+                                    <div class="d-flex justify-content-between align-items-center">
+                                        <h4 class="text-white">Pesto Chicken Salad</h4>
+                                        <span class="text-warning fw-bold">₹200</span>
+                                    </div>
+                                    <p class="small text-white-50">Grilled chicken breast, house-made basil pesto, cherry tomatoes & fresh garden greens</p>
+                                <button class="btn btn-warning w-100 mt-2 fw-bold" onclick="addToCart('Pesto Chicken Salad', 200)">
+            Add to Cart
+        </button>
+                                </div>
+                            </div>
+
+                            <div class="col-md-4">
+                                <div class="menu-item-box p-3">
+                                    <img src="images/Wild Caprese.jpeg" class="img-fluid rounded mb-3" alt="Wild Caprese" style="height: 200px; width: 100%; object-fit: cover;">
+                                    <div class="d-flex justify-content-between align-items-center">
+                                        <h4 class="text-white">Wild Caprese</h4>
+                                        <span class="text-warning fw-bold">₹180</span>
+                                    </div>
+                                    <p class="small text-white-50">Juicy tomatoes, creamy buffalo mozzarella, basil pesto, balsamic topped with rocket & fennel</p>
+                                <button class="btn btn-warning w-100 mt-2 fw-bold" onclick="addToCart('Wild Caprese', 180)">
+    Add to Cart
+</button>
+                                </div>
+                            </div>
+                        </div> 
+
+                        <div class="d-flex justify-content-center w-100 pb-5">
+                            <button class="btn-menu-close" onclick="closeFullMenu()">
+    
+    <span class="btn-text">Return to Amalfi</span>
+</button>
+                        </div>
+                    </div>
+                </div>
+                
+
+                <div class="col-md-4">
+    <div class="category-card shadow" onclick="openSidesMenu()" style="cursor: pointer;">
+        <img src="images/Aranciniiii.jpeg" alt="Sides" class="img-fluid w-100" style="height: 250px; object-fit: cover;">
+        <h3>Sides</h3>
+        <p class="px-3">Crispy fries, breads, and garden fresh salads.</p>
+       <span class="btn text-success fw-bold mb-3">Explore &rarr;</span>
+    </div>
+</div>
+<div id="sidesMenuOverlay" class="full-menu-overlay">
+    <button class="sticky-close-btn" onclick="closeSidesMenu()">
+        <i class="fas fa-times"></i>
+    </button>
+    <div class="container py-5 menu-book-animation"> 
+        <h2 class="text-center welcome-title text-warning mb-5">Sides Selection</h2>
+        
+        <div class="row g-4 mb-5">
+            <div class="col-md-4">
+                <div class="menu-item-box p-3">
+                    <img src="images/Herby King Prawns.jpeg" class="img-fluid rounded mb-3" alt="Herby King Prawns" style="height: 200px; width: 100%; object-fit: cover;">
+                    <div class="d-flex justify-content-between align-items-center">
+                        <h4 class="text-white">Herby King Prawns</h4>
+                        <span class="text-warning fw-bold">₹280</span>
+                    </div>
+                    <p class="small text-white-50">Chilli & garlic butter sauce, fresh lemon & parsley</p>
+               <button class="btn btn-warning w-100 mt-2 fw-bold" onclick="addToCart('Herby King Prawns', 280)">
+    Add to Cart
+</button>
+
+                </div>
+            </div>
+
+            <div class="col-md-4">
+                <div class="menu-item-box p-3">
+                    <img src="images/mushroom fr.jpeg" class="img-fluid rounded mb-3" alt="Mushroom Fritti" style="height: 200px; width: 100%; object-fit: cover;">
+                    <div class="d-flex justify-content-between align-items-center">
+                        <h4 class="text-white">Mushroom Fritti</h4>
+                        <span class="text-warning fw-bold">₹200</span>
+                    </div>
+                    <p class="small text-white-50">Breadcrumbed wild mushrooms, punchy garlic aioli, lemon wedge</p>
+                    <button class="btn btn-warning w-100 mt-2 fw-bold" onclick="addToCart('Mushroom Fritti', 200)">
+    Add to Cart
+</button>
+                </div>
+            </div>
+
+            <div class="col-md-4">
+                <div class="menu-item-box p-3">
+                    <img src="images/Aranciniiii.jpeg" class="img-fluid rounded mb-3" alt="Margherita Arancini" style="height: 200px; width: 100%; object-fit: cover;">
+                    <div class="d-flex justify-content-between align-items-center">
+                        <h4 class="text-white">Margherita Arancini</h4>
+                        <span class="text-warning fw-bold">₹200</span>
+                    </div>
+                    <p class="small text-white-50">Crispy mozzarella, tomato risotto balls, spicy arrabbiata sauce, fresh basil</p>
+                    <button class="btn btn-warning w-100 mt-2 fw-bold" onclick="addToCart('Margherita Arancini', 200)">
+    Add to Cart
+</button>
+                </div>
+            </div>
+
+            <div class="col-md-4">
+                <div class="menu-item-box p-3">
+                    <img src="images/crispy.jpeg" class="img-fluid rounded mb-3" alt="Crispy Squid" style="height: 200px; width: 100%; object-fit: cover;">
+                    <div class="d-flex justify-content-between align-items-center">
+                        <h4 class="text-white">Crispy Squid</h4>
+                        <span class="text-warning fw-bold">₹250</span>
+                    </div>
+                    <p class="small text-white-50">Fried & served with lemon & chilli, garlic, parsley, aioli</p>
+                    <button class="btn btn-warning w-100 mt-2 fw-bold" onclick="addToCart('Crispy Squid', 250)">
+    Add to Cart
+</button>
+                </div>
+            </div>
+
+            <div class="col-md-4">
+                <div class="menu-item-box p-3">
+                    <img src="images/funkyy.jpeg" class="img-fluid rounded mb-3" alt="Funky Fries" style="height: 200px; width: 100%; object-fit: cover;">
+                    <div class="d-flex justify-content-between align-items-center">
+                        <h4 class="text-white">Funky Fries</h4>
+                        <span class="text-warning fw-bold">₹100</span>
+                    </div>
+                    <p class="small text-white-50">Fries served with garlic & parsley</p>
+                    <button class="btn btn-warning w-100 mt-2 fw-bold" onclick="addToCart('Funky Fries', 100)">
+    Add to Cart
+</button>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="menu-item-box p-3">
+                    <img src="images/spiced.jpg" class="img-fluid rounded mb-3" alt="Funky Fries" style="height: 200px; width: 100%; object-fit: cover;">
+                    <div class="d-flex justify-content-between align-items-center">
+                        <h4 class="text-white">Spiced Fries</h4>
+                        <span class="text-warning fw-bold">₹100</span>
+                    </div>
+                    <p class="small text-white-50">Spicy fries can be made by tossing crispy fried or baked potatoes with spices</p>
+                    <button class="btn btn-warning w-100 mt-2 fw-bold" onclick="addToCart('Spiced Fries', 100)">
+    Add to Cart
+</button>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="menu-item-box p-3">
+                    <img src="images/spicy chicken.jpeg" class="img-fluid rounded mb-3" alt="Funky Fries" style="height: 200px; width: 100%; object-fit: cover;">
+                    <div class="d-flex justify-content-between align-items-center">
+                        <h4 class="text-white">Spicy Chicken Wings</h4>
+                        <span class="text-warning fw-bold">₹220</span>
+                    </div>
+                    <p class="small text-white-50">Crispy wings tossed in fiery Calabrian chili glaze and herbs.</p>
+                    <button class="btn btn-warning w-100 mt-2 fw-bold" onclick="addToCart('Spicy Chicken Wings', 220)">
+    Add to Cart
+</button>
+
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="menu-item-box p-3">
+                    <img src="images/BBQ C WINGS.jpg" class="img-fluid rounded mb-3" alt="Funky Fries" style="height: 200px; width: 100%; object-fit: cover;">
+                    <div class="d-flex justify-content-between align-items-center">
+                        <h4 class="text-white">BBQ Chicken Wings</h4>
+                        <span class="text-warning fw-bold">₹220</span>
+                    </div>
+                    <p class="small text-white-50">Smoky glazed wings, slow-roasted with our signature honey-infused BBQ sauces</p>
+                    <button class="btn btn-warning w-100 mt-2 fw-bold" onclick="addToCart('BBQ Chicken Wings', 220)">
+    Add to Cart
+</button>
+                </div>
+            </div>
+
+            <div class="col-md-4">
+                <div class="menu-item-box p-3">
+                    <img src="images/Fritto Misto.jpeg" class="img-fluid rounded mb-3" alt="Fritto Misto" style="height: 200px; width: 100%; object-fit: cover;">
+                    <div class="d-flex justify-content-between align-items-center">
+                        <h4 class="text-white">Fritto Misto</h4>
+                        <span class="text-warning fw-bold">₹280</span>
+                    </div>
+                    <p class="small text-white-50">Crispy fried seafood, angel-hair prawn, spicy rub & garlic aioli</p>
+                    <button class="btn btn-warning w-100 mt-2 fw-bold" onclick="addToCart('Fritto Misto', 280)">
+    Add to Cart
+</button>
+                </div>
+            </div>
+        </div> 
+
+        <div class="d-flex justify-content-center w-100 pb-5">
+            <button class="btn-menu-close" onclick="closeSidesMenu()">
+                <span class="btn-text">Return to Amalfi</span>
+            </button>
+        </div>
+    </div>
+</div>
+
+              <div class="col-md-4">
+ <div class="category-card shadow" onclick="openSoupMenu()" style="cursor: pointer;">
+        <img src="images/mushroom soup.jpeg" alt="Soup" class="img-fluid w-100" style="height: 250px; object-fit: cover;">
+        <h3>Soups</h3>
+        <p class="px-3">Warm and comforting classic Italian broths.</p>
+        <span class="btn text-success fw-bold mb-3">Explore &rarr;</span>
+    </div>
+</div>
+<div id="soupMenuOverlay" class="full-menu-overlay">
+    <button class="sticky-close-btn" onclick="closeSoupMenu()">
+        <i class="fas fa-times"></i>
+    </button>
+    <div class="container py-5 menu-book-animation"> 
+        <h2 class="text-center welcome-title text-warning mb-5">Soup Selection</h2>
+        
+        <div class="row g-4 mb-5">
+            <div class="col-md-4">
+                <div class="menu-item-box p-3">
+                    <img src="images/Sea Food.jpeg" class="img-fluid rounded mb-3" alt="Classic Minestrone" style="height: 200px; width: 100%; object-fit: cover;">
+                    <div class="d-flex justify-content-between align-items-center">
+                        <h4 class="text-white">Sea Food Soup</h4>
+                        <span class="text-warning fw-bold">₹200</span>
+                    </div>
+                    <p class="small text-white-50">Traditional Italian vegetable soup with beans, pasta, and herbs.</p>
+                    <button class="btn btn-warning w-100 mt-2 fw-bold" onclick="addToCart('Sea Food Soup', 200)">   Add to Cart
+</button>
+                </div>
+            </div>
+
+            <div class="col-md-4">
+                <div class="menu-item-box p-3">
+                    <img src="images/mushroom soup.jpeg" class="img-fluid rounded mb-3" alt="Creamy Mushroom Soup" style="height: 200px; width: 100%; object-fit: cover;">
+                    <div class="d-flex justify-content-between align-items-center">
+                        <h4 class="text-white">Creamy Mushroom</h4>
+                        <span class="text-warning fw-bold">₹150</span>
+                    </div>
+                    <p class="small text-white-50">Velvety wild mushroom soup drizzled with truffle oil.</p>
+                    <button class="btn btn-warning w-100 mt-2 fw-bold" onclick="addToCart('Creamy Mushroom Soup', 150)">   Add to Cart</button>
+
+                </div>
+            </div>
+
+            <div class="col-md-4">
+                <div class="menu-item-box p-3">
+                    <img src="images/Tomato Basil.jpg" class="img-fluid rounded mb-3" alt="Tomato Basil Soup" style="height: 200px; width: 100%; object-fit: cover;">
+                    <div class="d-flex justify-content-between align-items-center">
+                        <h4 class="text-white">Pomodora Soup</h4>
+                        <span class="text-warning fw-bold">₹120</span>
+                    </div>
+                    <p class="small text-white-50">Roasted San Marzano tomatoes blended with fresh basil and cream.</p>
+                    <button class="btn btn-warning w-100 mt-2 fw-bold" onclick="addToCart('Pomodora Soup', 120)">   Add to Cart</button>
+                </div>
+            </div>
+        </div> 
+
+        <div class="d-flex justify-content-center w-100 pb-5">
+            <button class="btn-menu-close" onclick="closeSoupMenu()">
+                <span class="btn-text">Return to Amalfi</span>
+            </button>
+        </div>
+    </div>
+</div>
+
+              <div class="col-md-4">
+   <div class="category-card shadow" onclick="openPastaMenu()" style="cursor: pointer;">
+        <img src="images/prawn linguine.jpeg" alt="Pasta" class="img-fluid w-100" style="height: 250px; object-fit: cover;">
+        <h3>Pasta</h3>
+        <p class="px-3">Freshly made pasta with Italian sauces.</p> 
+    <span class="btn text-success fw-bold mb-3">Explore &rarr;</span>
+    </div>
+</div>
+<div id="pastaMenuOverlay" class="full-menu-overlay">
+    <button class="sticky-close-btn" onclick="closePastaMenu()">
+        <i class="fas fa-times"></i>
+    </button>
+    <div class="container py-5 menu-book-animation"> 
+        <h2 class="text-center welcome-title text-warning mb-5">Pasta Selection</h2>
+        
+        <div class="row g-4 mb-5">
+            <div class="col-md-4">
+                <div class="menu-item-box p-3">
+                    <img src="images/Spinach r.webp" class="img-fluid rounded mb-3" alt="Spinach Ravioli" style="height: 200px; width: 100%; object-fit: cover;">
+                    <div class="d-flex justify-content-between align-items-center">
+                        <h4 class="text-white">Spinach Ravioli</h4>
+                        <span class="text-warning fw-bold">₹250</span>
+                    </div>
+                    <p class="small text-white-50">Spinach & ricotta ravioli, rich tomato passata, basil, aged parmesan & boccancini.</p>
+                    <button class="btn btn-warning w-100 mt-2 fw-bold" onclick="addToCart('Spinach Ravioli', 250)">   Add to Cart</button>  
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="menu-item-box p-3">
+                    <img src="images/mushroo.jpg" class="img-fluid rounded mb-3" alt="Mushroom Tag" style="height: 200px; width: 100%; object-fit: cover;">
+                    <div class="d-flex justify-content-between align-items-center">
+                        <h4 class="text-white">Mushroom Tag</h4>
+                        <span class="text-warning fw-bold">₹250</span>
+                    </div>
+                    <p class="small text-white-50">Garlicky mushroom sauce, mushroom & parmesan.</p>
+                    <button class="btn btn-warning w-100 mt-2 fw-bold" onclick="addToCart('Mushroom Tag', 250)">   Add to Cart</button>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="menu-item-box p-3">
+                    <img src="images/prawn linguine.jpeg" class="img-fluid rounded mb-3" alt="Prawn Linguine" style="height: 200px; width: 100%; object-fit: cover;">
+                    <div class="d-flex justify-content-between align-items-center">
+                        <h4 class="text-white">Prawn Linguine</h4>
+                        <span class="text-warning fw-bold">₹350</span>
+                    </div>
+                    <p class="small text-white-50">Garlicky prawns in a creamy lemon sauce, garnished with fresh parsley.</p>
+                    <button class="btn btn-warning w-100 mt-2 fw-bold" onclick="addToCart('Prawn Linguine', 350)">   Add to Cart</button>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="menu-item-box p-3">
+                    <img src="images/Spaghetti-carbonara.webp" class="img-fluid rounded mb-3" alt="Prawn Linguine" style="height: 200px; width: 100%; object-fit: cover;">
+                    <div class="d-flex justify-content-between align-items-center">
+                        <h4 class="text-white">Spaghetti Carbonara</h4>
+                        <span class="text-warning fw-bold">₹300</span>
+                    </div>
+                    <p class="small text-white-50">Classic Italian carbonara with crispy pancetta and a generous amount of parmesan.</p>
+                    <button class="btn btn-warning w-100 mt-2 fw-bold" onclick="addToCart('Spaghetti Carbonara', 300)">   Add to Cart</button>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="menu-item-box p-3">
+                    <img src="images/Taglita.jpg" class="img-fluid rounded mb-3" alt="Prawn Linguine" style="height: 200px; width: 100%; object-fit: cover;">
+                    <div class="d-flex justify-content-between align-items-center">
+                        <h4 class="text-white">Tagliatelle Bolognese</h4>
+                        <span class="text-warning fw-bold">₹390</span>
+                    </div>
+                    <p class="small text-white-50">Rich meat sauce with fresh basil and parmesan.</p>
+                    <button class="btn btn-warning w-100 mt-2 fw-bold" onclick="addToCart('Tagliatelle Bolognese', 390)">   Add to Cart</button>
+                </div>
+            </div>
+
+            <div class="col-md-4">
+                <div class="menu-item-box p-3">
+                    <img src="images/Penne Alfredo.jpeg" class="img-fluid rounded mb-3" alt="Penne Alfredo" style="height: 200px; width: 100%; object-fit: cover;">
+                    <div class="d-flex justify-content-between align-items-center">
+                        <h4 class="text-white">Penne Alfredo</h4>
+                        <span class="text-warning fw-bold">₹200</span>
+                    </div>
+                    <p class="small text-white-50">Creamy parmesan sauce, black pepper & parsley.</p>
+                    <button class="btn btn-warning w-100 mt-2 fw-bold" onclick="addToCart('Penne Alfredo', 200)">   Add to Cart</button>
+                </div>
+            </div>
+
+            <div class="col-md-4">
+                <div class="menu-item-box p-3">
+                    <img src="images/perfect-spaghetti-and-meatballs.webp" class="img-fluid rounded mb-3" alt="Spaghetti Meat Ball" style="height: 200px; width: 100%; object-fit: cover;">
+                    <div class="d-flex justify-content-between align-items-center">
+                        <h4 class="text-white">Spaghetti Meat Ball</h4>
+                        <span class="text-warning fw-bold">₹260</span>
+                    </div>
+                    <p class="small text-white-50">Spicy beef meat balls, rich tomato passata, basil & parmesan.</p>
+                    <button class="btn btn-warning w-100 mt-2 fw-bold" onclick="addToCart('Spaghetti Meat Ball', 260)">   Add to Cart</button>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="menu-item-box p-3">
+                    <img src="images/Penne Arrabbiataaa.jpeg" class="img-fluid rounded mb-3" alt="Spaghetti Meat Ball" style="height: 200px; width: 100%; object-fit: cover;">
+                    <div class="d-flex justify-content-between align-items-center">
+                        <h4 class="text-white">Penne Arrabbiata</h4>
+                        <span class="text-warning fw-bold">₹250</span>
+                    </div>
+                    <p class="small text-white-50">Spicy beef meat balls, rich tomato passata, basil & parmesan.</p>
+                    <button class="btn btn-warning w-100 mt-2 fw-bold" onclick="addToCart('Penne Arrabbiata', 250)">   Add to Cart</button>
+                </div>
+            </div>
+
+            <div class="col-md-4">
+                <div class="menu-item-box p-3">
+                    <img src="images/lemon li.jpeg" class="img-fluid rounded mb-3" alt="Amalfi Lemon Linguine" style="height: 200px; width: 100%; object-fit: cover;">
+                    <div class="d-flex justify-content-between align-items-center">
+                        <h4 class="text-white">Amalfi Lemon Linguine</h4>
+                        <span class="text-warning fw-bold">₹250</span>
+                    </div>
+                    <p class="small text-white-50">Creamy lemon sauce, garlicky prawns & fresh parsley.</p>
+                    <button class="btn btn-warning w-100 mt-2 fw-bold" onclick="addToCart('Amalfi Lemon Linguine', 250)">   Add to Cart</button>
+                </div>
+            </div>
+
+            <div class="col-md-4">
+                <div class="menu-item-box p-3">
+                    <img src="images/sea.jpg" class="img-fluid rounded mb-3" alt="Seafood Linguine" style="height: 200px; width: 100%; object-fit: cover;">
+                    <div class="d-flex justify-content-between align-items-center">
+                        <h4 class="text-white">Seafood Linguine</h4>
+                        <span class="text-warning fw-bold">₹350</span>
+                    </div>
+                    <p class="small text-white-50">Garlicky seafood, cherry tomatoes, chilli, parsley & capers.</p>
+                    <button class="btn btn-warning w-100 mt-2 fw-bold" onclick="addToCart('Seafood Linguine', 350)">   Add to Cart</button>
+                </div>
+            </div>
+
+        </div> 
+
+        <div class="d-flex justify-content-center w-100 pb-5">
+            <button class="btn-menu-close" onclick="closePastaMenu()">
+                <span class="btn-text">Return to Amalfi</span>
+            </button>
+        </div>
+    </div>
+</div>
+              <div class="col-md-4">
+    <div class="category-card shadow" onclick="openRisottoMenu()" style="cursor: pointer;">
+        <img src="images/risoto.jpg" alt="Risotto" class="img-fluid w-100" style="height: 250px; object-fit: cover;">
+        <h3>Risotto</h3>
+        <p class="px-3">Creamy, slow-cooked Arborio rice delicacies.</p>
+    <span class="btn text-success fw-bold mb-3">Explore &rarr;</span>
+    </div>
+</div>
+<div id="risottoMenuOverlay" class="full-menu-overlay">
+    <button class="sticky-close-btn" onclick="closeRisottoMenu()">
+        <i class="fas fa-times"></i>
+    </button>
+    <div class="container py-5 menu-book-animation"> 
+        <h2 class="text-center welcome-title text-warning mb-5">Risotto Selection</h2>
+        
+        <div class="row g-4 mb-5 justify-content-center">
+            <div class="col-md-4">
+                <div class="menu-item-box p-3">
+                    <img src="images/funghi.jpg" class="img-fluid rounded mb-3" alt="Funghi Risotto" style="height: 200px; width: 100%; object-fit: cover;">
+                    <div class="d-flex justify-content-between align-items-center">
+                        <h4 class="text-white">Funghi Risotto</h4>
+                        <span class="text-warning fw-bold">₹280</span>
+                    </div>
+                    <p class="small text-white-50">Creamy wild mushrooms risotto, parsley, mozzarella & parmesan.</p>
+                    <button class="btn btn-warning w-100 mt-2 fw-bold" onclick="addToCart('Funghi Risotto', 280)">   Add to Cart</button>
+                </div>
+            </div>
+
+            <div class="col-md-4">
+                <div class="menu-item-box p-3">
+                    <img src="images/prawns r.jpeg" class="img-fluid rounded mb-3" alt="Prawns Risotto" style="height: 200px; width: 100%; object-fit: cover;">
+                    <div class="d-flex justify-content-between align-items-center">
+                        <h4 class="text-white">Prawns Risotto</h4>
+                        <span class="text-warning fw-bold">₹350</span>
+                    </div>
+                    <p class="small text-white-50">Oozy saffron risotto, juicy tiger prawns & fresh herbs.</p>
+                    <button class="btn btn-warning w-100 mt-2 fw-bold" onclick="addToCart('Prawns Risotto', 350)">   Add to Cart</button>
+                </div>
+            </div>
+        </div> 
+
+        <div class="d-flex justify-content-center w-100 pb-5">
+            <button class="btn-menu-close" onclick="closeRisottoMenu()">
+                <span class="btn-text">Return to Amalfi</span>
+            </button>
+        </div>
+    </div>
+</div>
+<div class="col-md-4">
+    <div class="category-card shadow" onclick="openSecondiMenu()" style="cursor: pointer;">
+        <img src="images/secondi.webp" alt="Secondi" class="img-fluid w-100" style="height: 250px; object-fit: cover;">
+        <h3>Secondi</h3>
+        <p class="px-3">Premium meat and seafood main courses.</p>
+        <span class="btn text-success fw-bold mb-3">Explore &rarr;</span>
+    </div>
+</div>
+<div id="secondiMenuOverlay" class="full-menu-overlay">
+    <button class="sticky-close-btn" onclick="closeSecondiMenu()">
+        <i class="fas fa-times"></i>
+    </button>
+    <div class="container py-5 menu-book-animation"> 
+        <h2 class="text-center welcome-title text-warning mb-5">Secondi Selection</h2>
+        
+        <div class="row g-4 mb-5">
+            <div class="col-md-4">
+                <div class="menu-item-box p-3">
+                    <img src="images/peppr corn.jpeg" class="img-fluid rounded mb-3" alt="Pepper Corn Steak" style="height: 200px; width: 100%; object-fit: cover;">
+                    <div class="d-flex justify-content-between align-items-center">
+                        <h4 class="text-white">Pepper Corn Steak</h4>
+                        <span class="text-warning fw-bold">₹400</span>
+                    </div>
+                    <p class="small text-white-50">Beef fillet cooked to your liking, creamy green pepper corn & mushroom sauce, rocket, crispy fries.</p>
+                    <button class="btn btn-warning w-100 mt-2 fw-bold" onclick="addToCart('Pepper Corn Steak', 400)">   Add to Cart</button>
+                </div>
+            </div>
+
+            <div class="col-md-4">
+                <div class="menu-item-box p-3">
+                    <img src="images/Chicken milanese.jpeg" class="img-fluid rounded mb-3" alt="Chicken Milanese" style="height: 200px; width: 100%; object-fit: cover;">
+                    <div class="d-flex justify-content-between align-items-center">
+                        <h4 class="text-white">Chicken Milanese</h4>
+                        <span class="text-warning fw-bold">₹300</span>
+                    </div>
+                    <p class="small text-white-50">Crispy breaded chicken breast, beautiful tomato salad, spicy arrabbiata, peppery rocket.</p>
+                    <button class="btn btn-warning w-100 mt-2 fw-bold" onclick="addToCart('Chicken Milanese', 300)">   Add to Cart</button>
+                </div>
+            </div>
+
+            <div class="col-md-4">
+                <div class="menu-item-box p-3">
+                    <img src="images/Chicken Almattone.jpeg" class="img-fluid rounded mb-3" alt="Chicken Almattone" style="height: 200px; width: 100%; object-fit: cover;">
+                    <div class="d-flex justify-content-between align-items-center">
+                        <h4 class="text-white">Chicken Almattone</h4>
+                        <span class="text-warning fw-bold">₹350</span>
+                    </div>
+                    <p class="small text-white-50">Herby chicken breast cooked under a brick until crispy, mashed potato, creamy mushroom sauce, lemony rocket & aged parmesan.</p>
+                    <button class="btn btn-warning w-100 mt-2 fw-bold" onclick="addToCart('Chicken Almattone', 350)">   Add to Cart</button>
+                </div>
+            </div>
+
+            <div class="col-md-4">
+                <div class="menu-item-box p-3">
+                    <img src="images/beef.webp" class="img-fluid rounded mb-3" alt="Italian Beef Burger" style="height: 200px; width: 100%; object-fit: cover;">
+                    <div class="d-flex justify-content-between align-items-center">
+                        <h4 class="text-white">Italian Beef Burger</h4>
+                        <span class="text-warning fw-bold">₹280</span>
+                    </div>
+                    <p class="small text-white-50">Beautiful beef patty, crispy beef bacon, oozy cheddar cheese, chilli mayo, lettuce & tomato in a roasted bun, funky fries.</p>
+                    <button class="btn btn-warning w-100 mt-2 fw-bold" onclick="addToCart('Italian Beef Burger', 280)">   Add to Cart</button>  
+                </div>
+            </div>
+
+            <div class="col-md-4">
+                <div class="menu-item-box p-3">
+                    <img src="images/classsic.jpg" class="img-fluid rounded mb-3" alt="Classic Chicken Burger" style="height: 200px; width: 100%; object-fit: cover;">
+                    <div class="d-flex justify-content-between align-items-center">
+                        <h4 class="text-white">Classic Chicken Burger</h4>
+                        <span class="text-warning fw-bold">₹250</span>
+                    </div>
+                    <p class="small text-white-50">Buttermilk fried chicken, oozy cheddar cheese, chilli mayo, rocket & tomato in a toasted bun, funky fries.</p>
+                    <button class="btn btn-warning w-100 mt-2 fw-bold" onclick="addToCart('Classic Chicken Burger', 250)">   Add to Cart</button>
+                </div>
+            </div>
+        </div> 
+
+        <div class="d-flex justify-content-center w-100 pb-5">
+            <button class="btn-menu-close" onclick="closeSecondiMenu()">
+                <span class="btn-text">Return to Amalfi</span>
+            </button>
+        </div>
+    </div>
+</div>
+
+            <div class="col-md-4">
+    <div class="category-card shadow" onclick="openPizzaMenu()" style="cursor: pointer;">
+        <img src="images/bbq c.jpeg" alt="Pizza" class="img-fluid w-100" style="height: 250px; object-fit: cover;">
+        <h3>Pizza</h3>
+        <p class="px-3">Hand-stretched and stone-baked to perfection.</p>
+        <span class="btn text-success fw-bold mb-3">Explore &rarr;</span>
+    </div>
+</div>
+<div id="pizzaMenuOverlay" class="full-menu-overlay">
+    <button class="sticky-close-btn" onclick="closePizzaMenu()">
+        <i class="fas fa-times"></i>
+    </button>
+    <div class="container py-5 menu-book-animation"> 
+        <h2 class="text-center welcome-title text-warning mb-5">Pizza Selection</h2>
+        
+        <div class="row g-4 mb-5">
+            <div class="col-md-4">
+                <div class="menu-item-box p-3">
+                    <img src="images/Margarita p.jpeg" class="img-fluid rounded mb-3" alt="Margherita Pizza" style="height: 200px; width: 100%; object-fit: cover;">
+                    <div class="d-flex justify-content-between align-items-center">
+                        <h4 class="text-white">Margherita</h4>
+                        <span class="text-warning fw-bold">₹300</span>
+                    </div>
+                    <p class="small text-white-50">Crushed tomato sauce, mozzarella, fresh basil, aged parmesan.</p>
+                    <button class="btn btn-warning w-100 mt-2 fw-bold" onclick="addToCart('Margherita Pizza', 300)">   Add to Cart</button> 
+                
+                </div>
+            </div>
+
+            <div class="col-md-4">
+                <div class="menu-item-box p-3">
+                    <img src="images/funghi misti.jpeg" class="img-fluid rounded mb-3" alt="Funghi Misti" style="height: 200px; width: 100%; object-fit: cover;">
+                    <div class="d-flex justify-content-between align-items-center">
+                        <h4 class="text-white">Funghi Misti</h4>
+                        <span class="text-warning fw-bold">₹400</span>
+                    </div>
+                    <p class="small text-white-50">Porcini mushroom sauce, mozzarella, roasted mushroom, parsley, lemon juice & evo.</p>
+                    <button class="btn btn-warning w-100 mt-2 fw-bold" onclick="addToCart('Funghi Misti Pizza', 400)">   Add to Cart</button>
+                </div>
+            </div>
+
+            <div class="col-md-4">
+                <div class="menu-item-box p-3">
+                    <img src="images/Pollo.jpeg" class="img-fluid rounded mb-3" alt="Pollo Pesto" style="height: 200px; width: 100%; object-fit: cover;">
+                    <div class="d-flex justify-content-between align-items-center">
+                        <h4 class="text-white">Pollo Pesto</h4>
+                        <span class="text-warning fw-bold">₹450</span>
+                    </div>
+                    <p class="small text-white-50">Crushed tomato sauce, mozzarella & aged cheddar, basil pesto chicken, baby potatoes, fresh basil & evo.</p>
+                    <button class="btn btn-warning w-100 mt-2 fw-bold" onclick="addToCart('Pollo Pesto Pizza', 450)">   Add to Cart</button>
+                </div>
+            </div>
+
+            <div class="col-md-4">
+                <div class="menu-item-box p-3">
+                    <img src="images/bbq c.jpeg" class="img-fluid rounded mb-3" alt="BBQ Chicken Pizza" style="height: 200px; width: 100%; object-fit: cover;">
+                    <div class="d-flex justify-content-between align-items-center">
+                        <h4 class="text-white">BBQ Chicken Pizza</h4>
+                        <span class="text-warning fw-bold">₹450</span>
+                    </div>
+                    <p class="small text-white-50">Bell peppers, pickle onion, BBQ sauce, tomato sauce, mozzarella, rocket, chilli flakes & origano.</p>
+                    <button class="btn btn-warning w-100 mt-2 fw-bold" onclick="addToCart('BBQ Chicken Pizza', 450)">   Add to Cart</button>
+                </div>
+            </div>
+
+            <div class="col-md-4">
+                <div class="menu-item-box p-3">
+                    <img src="images/pizza ga.jpeg" class="img-fluid rounded mb-3" alt="Pizza Gamberi" style="height: 200px; width: 100%; object-fit: cover;">
+                    <div class="d-flex justify-content-between align-items-center">
+                        <h4 class="text-white">Pizza Gamberi</h4>
+                        <span class="text-warning fw-bold">₹550</span>
+                    </div>
+                    <p class="small text-white-50">Fishy sauce & tomato sauce, mozzarella, herby prawns, lemony rocket, chilli flakes.</p>
+                    <button class="btn btn-warning w-100 mt-2 fw-bold" onclick="addToCart('Pizza Gamberi', 550)">   Add to Cart</button>
+                </div>
+            </div>
+
+            <div class="col-md-4">
+                <div class="menu-item-box p-3">
+                    <img src="images/peppero.webp" class="img-fluid rounded mb-3" alt="Pizza Pepperoni" style="height: 200px; width: 100%; object-fit: cover;">
+                    <div class="d-flex justify-content-between align-items-center">
+                        <h4 class="text-white">Pizza Pepperoni</h4>
+                        <span class="text-warning fw-bold">₹500</span>
+                    </div>
+                    <p class="small text-white-50">Crushed tomato sauce, mozzarella, pepperoni, parmesan & origano.</p>
+                    <button class="btn btn-warning w-100 mt-2 fw-bold" onclick="addToCart('Pizza Pepperoni', 500)">   Add to Cart</button>
+                </div>
+            </div>
+
+            <div class="col-md-4">
+                <div class="menu-item-box p-3">
+                    <img src="images/diavo.jpeg" class="img-fluid rounded mb-3" alt="Pizza Diavola" style="height: 200px; width: 100%; object-fit: cover;">
+                    <div class="d-flex justify-content-between align-items-center">
+                        <h4 class="text-white">Pizza Diavola</h4>
+                        <span class="text-warning fw-bold">₹450</span>
+                    </div>
+                    <p class="small text-white-50">Shedded chicken, olives, green chilli, red chilli, mozzarella, parmesan, rocket, origano & boccancini.</p>
+                    <button class="btn btn-warning w-100 mt-2 fw-bold" onclick="addToCart('Pizza Diavola', 450)">   Add to Cart</button>
+                </div>
+            </div>
+        </div> 
+
+        <div class="d-flex justify-content-center w-100 pb-5">
+            <button class="btn-menu-close" onclick="closePizzaMenu()">
+                <span class="btn-text">Return to Amalfi</span>
+            </button>
+        </div>
+    </div>
+</div>
+<div class="col-md-4">
+    <div class="category-card shadow" onclick="openMocktailsMenu()" style="cursor: pointer;">
+        <img src="images/mock.jpg" alt="Mocktails" class="img-fluid w-100" style="height: 250px; object-fit: cover;">
+        <h3>Mocktails</h3>
+        <p class="px-3">Refreshing non-alcoholic signature blends.</p>
+       <span class="btn text-success fw-bold mb-3">Explore &rarr;</span>
+    </div>
+</div>
+<div id="mocktailsMenuOverlay" class="full-menu-overlay">
+    <button class="sticky-close-btn" onclick="closeMocktailsMenu()">
+        <i class="fas fa-times"></i>
+    </button>
+    <div class="container py-5 menu-book-animation"> 
+        <h2 class="text-center welcome-title text-warning mb-5">Mocktails Selection</h2>
+        
+        <div class="row g-4 mb-5">
+            <div class="col-md-4">
+                <div class="menu-item-box p-3">
+                    <img src="images/Strawberry-Mojito-Drink.jpg" class="img-fluid rounded mb-3" alt="Strawberry Mohito" style="height: 200px; width: 100%; object-fit: cover;">
+                    <div class="d-flex justify-content-between align-items-center">
+                        <h4 class="text-white">Strawberry Mohito</h4>
+                        <span class="text-warning fw-bold">₹100</span>
+                    </div>
+                    <p class="small text-white-50">Strawberry, mint, lemon juice, lime slice & soda.</p>
+                    <button class="btn btn-warning w-100 mt-2 fw-bold" onclick="addToCart('Strawberry Mojito', 100)">   Add to Cart</button>
+                </div>
+            </div>
+
+            <div class="col-md-4">
+                <div class="menu-item-box p-3">
+                    <img src="images/lichee.jpg" class="img-fluid rounded mb-3" alt="Lychee Rainbow Soda" style="height: 200px; width: 100%; object-fit: cover;">
+                    <div class="d-flex justify-content-between align-items-center">
+                        <h4 class="text-white">Lychee Rainbow Soda</h4>
+                        <span class="text-warning fw-bold">₹100</span>
+                    </div>
+                    <p class="small text-white-50">Lychee syrup, soda, butterfly pea juice & lemon juice.</p>
+                    <button class="btn btn-warning w-100 mt-2 fw-bold" onclick="addToCart('Lychee Rainbow Soda', 100)">   Add to Cart</button>
+                </div>
+            </div>
+
+            <div class="col-md-4">
+                <div class="menu-item-box p-3">
+                    <img src="images/night.jpg" class="img-fluid rounded mb-3" alt="Night Sea Soda" style="height: 200px; width: 100%; object-fit: cover;">
+                    <div class="d-flex justify-content-between align-items-center">
+                        <h4 class="text-white">Night Sea Soda</h4>
+                        <span class="text-warning fw-bold">₹100</span>
+                    </div>
+                    <p class="small text-white-50">Blue hawaii, soda, strawberry syrup, lemon slice & butterfly pea flower.</p>
+                    <button class="btn btn-warning w-100 mt-2 fw-bold" onclick="addToCart('Night Sea Soda', 100)">   Add to Cart</button>
+                </div>
+            </div>
+
+            <div class="col-md-4">
+                <div class="menu-item-box p-3">
+                    <img src="images/blue.jpg" class="img-fluid rounded mb-3" alt="Blue Lagoon" style="height: 200px; width: 100%; object-fit: cover;">
+                    <div class="d-flex justify-content-between align-items-center">
+                        <h4 class="text-white">Blue Lagoon</h4>
+                        <span class="text-warning fw-bold">₹100</span>
+                    </div>
+                    <p class="small text-white-50">Lemon, pineapple juice, Sprite & blue curacao.</p>
+                    <button class="btn btn-warning w-100 mt-2 fw-bold" onclick="addToCart('Blue Lagoon', 100)">   Add to Cart</button>
+                </div>
+            </div>
+
+            <div class="col-md-4">
+                <div class="menu-item-box p-3">
+                    <img src="images/GA.jpeg" class="img-fluid rounded mb-3" alt="Green Apple Mojito" style="height: 200px; width: 100%; object-fit: cover;">
+                    <div class="d-flex justify-content-between align-items-center">
+                        <h4 class="text-white">Green Apple Mojito</h4>
+                        <span class="text-warning fw-bold">₹100</span>
+                    </div>
+                    <p class="small text-white-50">Green apple, mint, lemon juice, lime slice, sugar syrup & soda.</p>
+                    <button class="btn btn-warning w-100 mt-2 fw-bold" onclick="addToCart('Green Apple Mojito', 100)">   Add to Cart</button>
+                </div>
+            </div>
+        </div> 
+
+        <div class="d-flex justify-content-center w-100 pb-5">
+            <button class="btn-menu-close" onclick="closeMocktailsMenu()">
+                <span class="btn-text">Return to Amalfi</span>
+            </button>
+        </div>
+    </div>
+</div>
+
+            <div class="col-md-4">
+    <div class="category-card shadow" onclick="openCoffeeMenu()" style="cursor: pointer;">
+        <img src="images/codfee.jpg" alt="Coffee & Tea" class="img-fluid w-100" style="height: 250px; object-fit: cover;">
+        <h3>Coffee & Tea</h3>
+        <p class="px-3">Authentic Italian espresso and brewed teas.</p>
+    <span class="btn text-success fw-bold mb-3">Explore &rarr;</span>
+    </div>
+</div>
+<div id="coffeeMenuOverlay" class="full-menu-overlay">
+    <button class="sticky-close-btn" onclick="closeCoffeeMenu()">
+        <i class="fas fa-times"></i>
+    </button>
+    <div class="container py-5 menu-book-animation"> 
+        <h2 class="text-center welcome-title text-warning mb-5">Coffee & Tea Selection</h2>
+        
+        <div class="row g-4 mb-5">
+            <div class="col-md-4">
+                <div class="menu-item-box p-3 text-center">
+                    <img src="images/espresso.jpg" class="img-fluid rounded mb-3" alt="Espresso" style="height: 200px; width: 100%; object-fit: cover;">
+                    <h4 class="text-white">Espresso</h4>
+                    <p class="text-warning fw-bold mb-1">₹75</p>
+                    <p class="small text-white-50">Authentic Italian short black coffee.</p>
+                    <button class="btn btn-warning w-100 mt-2 fw-bold" onclick="addToCart('Espresso', 75)">   Add to Cart</button>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="menu-item-box p-3 text-center">
+                    <img src="images/2 cup.avif" class="img-fluid rounded mb-3" alt="Espresso" style="height: 200px; width: 100%; object-fit: cover;">
+                    <h4 class="text-white">Espresso Double</h4>
+                    <p class="text-warning fw-bold mb-1">₹90</p>
+                    <p class="small text-white-50">2 Cups of Authentic Italian short black coffee.</p>
+                    <button class="btn btn-warning w-100 mt-2 fw-bold" onclick="addToCart('Espresso Double', 90)">   Add to Cart</button>
+                </div>
+            </div>
+
+            <div class="col-md-4">
+                <div class="menu-item-box p-3 text-center">
+                    <img src="images/americano.jpg" class="img-fluid rounded mb-3" alt="Americano" style="height: 200px; width: 100%; object-fit: cover;">
+                    <h4 class="text-white">Americano</h4>
+                    <p class="text-warning fw-bold mb-1">₹85</p>
+                    <p class="small text-white-50">Espresso shots topped with hot water.</p>
+                    <button class="btn btn-warning w-100 mt-2 fw-bold" onclick="addToCart('Americano', 85)">   Add to Cart</button>
+                </div>
+            </div>
+
+            <div class="col-md-4">
+                <div class="menu-item-box p-3 text-center">
+                    <img src="images/cappuccino.jpg" class="img-fluid rounded mb-3" alt="Cappuccino" style="height: 200px; width: 100%; object-fit: cover;">
+                    <h4 class="text-white">Cappuccino</h4>
+                    <p class="text-warning fw-bold mb-1">₹90</p>
+                    <p class="small text-white-50">Espresso with steamed milk and thick foam.</p>
+                    <button class="btn btn-warning w-100 mt-2 fw-bold" onclick="addToCart('Cappuccino', 90)">   Add to Cart</button>
+                </div>
+            </div>
+
+            <div class="col-md-4">
+                <div class="menu-item-box p-3 text-center">
+                    <img src="images/cafe.webp" class="img-fluid rounded mb-3" alt="Caffe Latte" style="height: 200px; width: 100%; object-fit: cover;">
+                    <h4 class="text-white">Caffè Latte</h4>
+                    <p class="text-warning fw-bold mb-1">₹100</p>
+                    <p class="small text-white-50">Creamy espresso with steamed milk.</p>
+                    <button class="btn btn-warning w-100 mt-2 fw-bold" onclick="addToCart('Caffè Latte', 100)">   Add to Cart</button>
+                </div>
+            </div>
+
+            <div class="col-md-4">
+                <div class="menu-item-box p-3 text-center">
+                    <img src="images/tea.webp" class="img-fluid rounded mb-3" alt="Peppermint Tea" style="height: 200px; width: 100%; object-fit: cover;">
+                    <h4 class="text-white">Peppermint Tea</h4>
+                    <p class="text-warning fw-bold mb-1">₹60</p>
+                    <p class="small text-white-50">Refreshing herbal mint tea.</p>
+                    <button class="btn btn-warning w-100 mt-2 fw-bold" onclick="addToCart('Peppermint Tea', 60)">   Add to Cart</button>
+                </div>
+            </div>
+
+            <div class="col-md-4">
+                <div class="menu-item-box p-3 text-center">
+                    <img src="images/english.jpg" class="img-fluid rounded mb-3" alt="English Breakfast Tea" style="height: 200px; width: 100%; object-fit: cover;">
+                    <h4 class="text-white">English Breakfast Tea</h4>
+                    <p class="text-warning fw-bold mb-1">₹60</p>
+                    <p class="small text-white-50">Classic strong black tea blend.</p>
+                    <button class="btn btn-warning w-100 mt-2 fw-bold" onclick="addToCart('English Breakfast Tea', 60)">   Add to Cart</button>
+                </div>
+            </div>
+
+            <div class="col-md-4 mx-auto">
+                <div class="menu-item-box p-3 text-center">
+                    <img src="images/hot.jpg" class="img-fluid rounded mb-3" alt="Hot Chocolate" style="height: 200px; width: 100%; object-fit: cover;">
+                    <h4 class="text-white">Hot Chocolate</h4>
+                    <p class="text-warning fw-bold mb-1">₹100</p>
+                    <p class="small text-white-50">Rich and creamy Italian style chocolate.</p>
+                    <button class="btn btn-warning w-100 mt-2 fw-bold" onclick="addToCart('Hot Chocolate', 100)">   Add to Cart</button>
+                </div>
+            </div>
+        </div> 
+
+        <div class="d-flex justify-content-center w-100 pb-5">
+            <button class="btn-menu-close" onclick="closeCoffeeMenu()">
+                <span class="btn-text">Return to Amalfi</span>
+            </button>
+        </div>
+    </div>
+</div>
+
+             <div class="col-md-4 mx-auto">
+    <div class="category-card shadow" onclick="openDessertsMenu()" style="cursor: pointer;">
+        <img src="images/dessert.jpg" alt="Desserts" class="img-fluid w-100" style="height: 250px; object-fit: cover;">
+        <h3>Desserts</h3>
+        <p class="px-3">Sweet endings like Tiramisu and Panna Cotta.</p>
+        <span class="btn text-success fw-bold mb-3">Explore &rarr;</span>
+            
+        </button>
+    </div>
+</div>
+<div id="dessertsMenuOverlay" class="full-menu-overlay">
+    <button class="sticky-close-btn" onclick="closeDessertsMenu()">
+        <i class="fas fa-times"></i>
+    </button>
+    <div class="container py-5 menu-book-animation"> 
+        <h2 class="text-center welcome-title text-warning mb-5">Desserts Selection</h2>
+        
+        <div class="row g-4 mb-5">
+            <div class="col-md-4">
+                <div class="menu-item-box p-3">
+                    <img src="images/brow.jpg" class="img-fluid rounded mb-3" alt="Brownie" style="height: 200px; width: 100%; object-fit: cover;">
+                    <div class="d-flex justify-content-between align-items-center">
+                        <h4 class="text-white">Brownie</h4>
+                        <span class="text-warning fw-bold">₹120</span>
+                    </div>
+                    <p class="small text-white-50">Brownie, chocolate sauce & vanilla ice cream.</p>
+                    <button class="btn btn-warning w-100 mt-2 fw-bold" onclick="addToCart('Brownie', 120)">   Add to Cart</button>
+                </div>
+            </div>
+
+            <div class="col-md-4">
+                <div class="menu-item-box p-3">
+                    <img src="images/tiramisu.webp" class="img-fluid rounded mb-3" alt="Tiramisu" style="height: 200px; width: 100%; object-fit: cover;">
+                    <div class="d-flex justify-content-between align-items-center">
+                        <h4 class="text-white">Tiramisu</h4>
+                        <span class="text-warning fw-bold">₹150</span>
+                    </div>
+                    <p class="small text-white-50">Layers of coffee-drenched sponge, fluffy mascarpone cream & rich chocolate.</p>
+                    <button class="btn btn-warning w-100 mt-2 fw-bold" onclick="addToCart('Tiramisu', 150)">   Add to Cart</button>
+                </div>
+            </div>
+
+            <div class="col-md-4">
+                <div class="menu-item-box p-3">
+                    <img src="images/vannilla panna.jpeg" class="img-fluid rounded mb-3" alt="Vanilla Panna Cotta" style="height: 200px; width: 100%; object-fit: cover;">
+                    <div class="d-flex justify-content-between align-items-center">
+                        <h4 class="text-white">Vanilla Panna Cotta</h4>
+                        <span class="text-warning fw-bold">₹120</span>
+                    </div>
+                    <p class="small text-white-50">Classic vanilla Panna cotta with blueberry compote.</p>
+                    <button class="btn btn-warning w-100 mt-2 fw-bold" onclick="addToCart('Vanilla Panna Cotta', 120)">   Add to Cart</button>
+                    
+                </div>
+            </div>
+
+            <div class="col-md-4">
+                <div class="menu-item-box p-3">
+                    <img src="images/vennila.jpg" class="img-fluid rounded mb-3" alt="Vanilla Ice Cream" style="height: 200px; width: 100%; object-fit: cover;">
+                    <div class="d-flex justify-content-between align-items-center">
+                        <h4 class="text-white">Vanilla Ice Cream</h4>
+                        <span class="text-warning fw-bold">₹100</span>
+                    </div>
+                    <p class="small text-white-50">Creamy vanilla ice cream made with real vanilla beans.</p>
+                    <button class="btn btn-warning w-100 mt-2 fw-bold" onclick="addToCart('Vanilla Ice Cream', 100)">   Add to Cart</button>    
+                </div>
+            </div>
+
+            <div class="col-md-4">
+                <div class="menu-item-box p-3">
+                    <img src="images/straw.jpg" class="img-fluid rounded mb-3" alt="Strawberry Ice Cream" style="height: 200px; width: 100%; object-fit: cover;">
+                    <div class="d-flex justify-content-between align-items-center">
+                        <h4 class="text-white">Strawberry Ice Cream</h4>
+                        <span class="text-warning fw-bold">₹100</span>
+                    </div>
+                    <p class="small text-white-50">Creamy strawberry ice cream made with fresh strawberries.</p>
+                    <button class="btn btn-warning w-100 mt-2 fw-bold" onclick="addToCart('Strawberry Ice Cream', 100)">   Add to Cart</button>
+                </div>
+            </div>
+
+            <div class="col-md-4">
+                <div class="menu-item-box p-3">
+                    <img src="images/salted.jpg" class="img-fluid rounded mb-3" alt="Salted Caramel Ice Cream" style="height: 200px; width: 100%; object-fit: cover;">
+                    <div class="d-flex justify-content-between align-items-center">
+                        <h4 class="text-white">Salted Caramel Ice Cream</h4>
+                        <span class="text-warning fw-bold">₹100</span>
+                    </div>
+                    <p class="small text-white-50">Creamy salted caramel ice cream with a hint of sea salt.</p>
+                    <button class="btn btn-warning w-100 mt-2 fw-bold" onclick="addToCart('Salted Caramel Ice Cream', 100)">   Add to Cart</button>
+                </div>
+            </div>
+        </div> 
+
+        <div class="d-flex justify-content-center w-100 pb-5">
+            <button class="btn-menu-close" onclick="closeDessertsMenu()">
+                <span class="btn-text">Return to Amalfi</span>
+            </button>
+        </div>
+    </div>
+</div>
+            </div>
+        </div>
+    </section>
+
+ <footer class="footer-section" id="footer">
+    <div class="container text-center">
+        <div class="footer-logo mb-3">AMALFI</div>
+        
+        <p class="opacity-75 mb-2">No:1, Kannaiaya Nagar, Boomaiyarpalayam, <br> 
+        Vanur Block, Viluppuram, Tamil Nadu-605104</p>
+
+        <div class="delivery-note mb-3">
+            <span class="badge bg-warning text-dark px-3 py-2 rounded-pill fw-bold">
+                <i class="fas fa-motorcycle me-2"></i> Free Home Delivery: Serenity Beach & Nearby Areas
+            </span>
+        </div>
+
+        <p class="text-warning fw-bold fs-5">Order: +91 86680 23282</p>
+
+        <div class="mt-4">
+            <a href="https://www.instagram.com/amalfi_italiano?igsh=NW43d29iNnozZ3J3" class="text-white mx-3 fs-3" target="_blank">
+                <i class="fab fa-instagram"></i></a>
+            <a href="https://maps.app.goo.gl/ifoz2dVsxGERdc388" target="_blank" class="text-white mx-3 fs-3">
+                <i class="fas fa-map-marker-alt"></i>
+            </a>
+        </div>
+
+        <hr class="mt-5 opacity-25 bg-light">
+        <p class="small mb-0 opacity-50">© 2026 Amalfi Italian Restaurant. All Rights Reserved.</p>
+    </div>
+</footer>
+    <div id="cartBar" class="fixed-bottom bg-dark text-white p-3 shadow-lg" style="display: none; z-index: 9999; border-top: 3px solid #ffda00;">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-md-4 text-center text-md-start">
+                    <h6 class="mb-0 text-warning" id="cartSummary">🛒 Items: 0 | Total: ₹0</h6>
+                </div>
+                <div class="col-md-6 my-2 my-md-0">
+                    <div class="input-group input-group-sm">
+                        <input type="text" id="userName" class="form-control" placeholder="Enter Your Name">
+                        <button class="btn btn-success fw-bold" onclick="sendToWhatsApp()">Order Now →</button>
+                    </div>
+                </div>
+                <div class="col-md-2 text-center text-md-end">
+                    <button class="btn btn-sm btn-outline-danger" onclick="cancelCart()">Cancel X</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="script.js"></script>
+    
+</body>
+</html>
