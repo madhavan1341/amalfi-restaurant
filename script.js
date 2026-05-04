@@ -257,3 +257,45 @@ function sendToWhatsApp() {
     const amalfiWhatsApp = "918668023282"; 
     window.open(`https://wa.me/${amalfiWhatsApp}?text=${orderText}`, '_blank');
 }
+
+
+
+
+     const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => { if (entry.isIntersecting) entry.target.classList.add('reveal-visible'); });
+        }, { threshold: 0.1 });
+        document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+
+        const matrixArea = document.getElementById('matrix-brand-hover');
+const glitterBox = document.getElementById('glitter-container');
+let glitterTimer;
+
+function createStarDust() {
+    const colors = ['#FF0000', '#FFFFFF', '#FF8888'];
+    for (let i = 0; i < 5; i++) {
+        const dust = document.createElement('div');
+        dust.className = 'star-dust';
+        dust.style.backgroundColor = colors[Math.floor(Math.random() * colors.length)];
+        
+        const x = (Math.random() - 0.5) * 80 + 'px';
+        const y = (Math.random() - 0.5) * 80 + 'px';
+        dust.style.setProperty('--x', x);
+        dust.style.setProperty('--y', y);
+        
+        dust.style.left = '40%';
+        dust.style.top = '50%';
+        
+        glitterBox.appendChild(dust);
+        setTimeout(() => dust.remove(), 800);
+    }
+}
+
+if (matrixArea) {
+    matrixArea.addEventListener('mouseenter', () => {
+        glitterTimer = setInterval(createStarDust, 150);
+    });
+    matrixArea.addEventListener('mouseleave', () => {
+        clearInterval(glitterTimer);
+    });
+    matrixArea.addEventListener('click', createStarDust);
+}
