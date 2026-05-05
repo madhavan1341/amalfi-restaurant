@@ -8,16 +8,16 @@
 }
 .full-menu-overlay.active { display: block; }
 .sticky-close-btn {
-    position: fixed;    /* 📌 பாறையா ஒரே இடத்துல நிக்கும் */
+    position: fixed;   
     top: 25px;
     right: 25px;
     width: 55px;
     height: 55px;
-    z-index: 999999 !important; /* 🚀 மிக அதிக முன்னுரிமை */
+    z-index: 999999 !important; 
     border: none;
     border-radius: 50%;
     cursor: pointer;
-    display: flex;      /* இப்போ இது எப்போதும் 'Ready'-ஆ இருக்கும் */
+    display: flex;    
     align-items: center;
     justify-content: center;
     font-size: 26px;
@@ -32,21 +32,15 @@
     animation: goldShine 3s ease infinite, glitter 1.5s infinite;
 }
 
-/* ❌ பழைய அந்த .full-menu-overlay.active + .sticky-close-btn வரியை டெலீட் பண்ணிடு மடி */
 
-
-
-
-/* 1. Root Variables & Reset */
-/* Logo alignment and spacing */
 .navbar-logo-main {
     transition: transform 0.3s ease;
     object-fit: contain;
 }
 
-/* Mouse mela vecha lite-ah oru effect */
+
 .navbar-brand:hover .navbar-logo-main {
-    transform: scale(1.05); /* Lite zoom for premium feel */
+    transform: scale(1.05); 
 }
 
 /* Brand text gap and style */
@@ -62,7 +56,7 @@
     --lemon-yellow: #ffda00;
     --gold: #ffca28;
     --white: #ffffff;
-    --dark-bg: rgba(0, 0, 0, 0.98); /* Konjam dark aakkiruken contrast-ku */
+    --dark-bg: rgba(0, 0, 0, 0.98); 
 }
 
 
@@ -93,7 +87,7 @@ body {
 
 .nav-link { 
    
-    white-space: nowrap !important; /* இது வார்த்தையை பிரிக்க விடாது, ஒரே வரியில வைக்கும் */
+    white-space: nowrap !important; 
 
     color: var(--white) !important; 
     font-weight: 500; 
@@ -184,7 +178,7 @@ body {
     background: var(--dark-bg);
     backdrop-filter: blur(15px);
     z-index: 10000;
-    overflow-y: auto; /* Indha line scroll-ku romba mukkiyam */
+    overflow-y: auto; 
     perspective: 2000px;
 }
 
@@ -326,8 +320,8 @@ footer {
 
 
 #cartBar {
-    z-index: 10001 !important; /* இது மத்த எல்லா மெனுவை விடவும் மேல இருக்கும் */
-    background-color: #1a1a1a !important; /* கொஞ்சம் டார்க்கா குடுத்தா தெளிவா தெரியும் */
+    z-index: 10001 !important; 
+    background-color: #1a1a1a !important; 
     border-top: 3px solid var(--lemon-yellow);
 }
 
@@ -335,7 +329,7 @@ footer {
 /* --- 🍋 AMALFI CLEAN & BIG NAVBAR --- */
 
 .navbar {
-    min-height: 110px !important; /* நாவ்பார் உயரம் 110px-க்கு ஏத்தியிருக்கேன் */
+    min-height: 110px !important;
     background-color: var(--amalfi-green) !important;
     position: fixed !important; 
     top: 0;
@@ -346,45 +340,42 @@ footer {
     align-items: center;
 }
 
-/* நாவ்பார் பிக்ஸட்-ஆ இருக்கறதுனால பாடி-யை கீழ தள்ளு */
 body {
     padding-top: 110px; 
 }
 
-/* லோகோ மற்றும் பேரை ஒண்ணா சேர்க்க */
+
 .navbar-brand {
     display: flex !important;
     align-items: center !important;
-    gap: 15px; /* லோகோவுக்கும் பேருக்கும் நடுவுல சின்ன கேப் */
+    gap: 15px;
     padding: 0 !important;
     margin: 0 !important;
 }
 
-/* லோகோ சைஸ் - நாவ்பார் உயரத்துக்கு ஏத்த மாதிரி */
+
 .navbar-brand img {
-    height: 100px !important; /* நாவ்பார் 110px, லோகோ 100px - கச்சிதமா இருக்கும் */
+    height: 100px !important;
     width: auto;
     filter: drop-shadow(0 4px 8px rgba(0,0,0,0.3));
     transition: transform 0.3s ease;
 }
-
-/* AMALFI பேரு - இப்போ லோகோ பக்கத்துலயே இருக்கும் */
 .brand-text {
     font-family: 'Arvo', serif !important;
     color: var(--lemon-yellow) !important;
-    font-size: 2.8rem !important; /* எழுத்து நல்லா பெருசா தெரியும் */
+    font-size: 2.8rem !important; 
     font-weight: 800 !important;
     letter-spacing: 2px;
     text-shadow: 2px 2px 5px rgba(0,0,0,0.3);
-    line-height: 1; /* நாவ்பார்ல சென்டரா இருக்க */
+    line-height: 1; 
 }
 
-/* Hover எஃபெக்ட் */
+
 .navbar-brand:hover img {
     transform: scale(1.05);
 }
 
-/* 📱 Mobile - மொபைல்ல அட்ஜஸ்ட்மென்ட் */
+
 @media (max-width: 991px) {
     .navbar { min-height: 80px !important; }
     body { padding-top: 80px; }
@@ -392,20 +383,63 @@ body {
     .brand-text { font-size: 1.8rem !important; }
 }
 
-/* மெனு ஐட்டம் பாக்ஸ் எல்லாமே ஒரே உயரத்துல இருக்க */
 .menu-item-box {
     display: flex;
     flex-direction: column;
-    height: 100%; /* கார்டு முழு உயரத்தை எடுக்கும் */
+    height: 100%;
 }
-
-/* டிஸ்கிரிப்ஷன் (p tag) ஒரே சைஸ்ல இருக்க */
 .menu-item-box p {
-    min-height: 50px; /* 2 வரிக்கு ஏத்த மாதிரி இடம் விட்டுடும் */
+    min-height: 50px; 
     margin-bottom: 15px;
 }
 
-/* பட்டன் எப்பவும் கார்டுக்கு அடியிலயே நிக்க */
+
 .menu-item-box button {
     margin-top: auto; 
 }
+
+
+
+
+
+.footer-left-side { display: inline-block; }
+.created-inline-wrapper { display: flex; align-items: center; gap: 10px; justify-content: flex-end; }
+.created-text { font-size: 0.65rem; color: rgba(255, 255, 255, 0.4); text-transform: uppercase; margin: 0; }
+
+.matrix-brand { display: flex; align-items: center; gap: 8px; text-decoration: none !important; position: relative; }
+.m-red { color: #FF0000; font-weight: 700; transition: 0.3s; }
+.b-white { color: #FFFFFF; font-weight: 700; transition: 0.3s; }
+
+.matrix-brand:hover .m-red { text-shadow: 0 0 15px #FF0000; }
+.matrix-brand:hover .b-white { text-shadow: 0 0 15px #FFFFFF; }
+
+.matrix-logo-circle-zoom { 
+    width: 28px; height: 28px; 
+    background: #fff; border-radius: 50%; overflow: hidden; 
+    display: flex; justify-content: center; align-items: center; 
+}
+.matrix-logo-circle-zoom img { width: 100%; height: 100%; object-fit: cover; }
+
+/* GLITTER PARTICLES */
+.star-dust {
+    position: absolute;
+    width: 4px; height: 4px;
+    border-radius: 50%;
+    pointer-events: none;
+    z-index: 10060;
+    animation: explode 1s ease-out forwards;
+}
+
+@keyframes explode {
+    0% { transform: translate(0, 0) scale(1); opacity: 1; }
+    100% { transform: translate(var(--x), var(--y)) scale(0); opacity: 0; }
+}
+
+/* Mobile Fix */
+@media (max-width: 768px) {
+    .matrix-fixed-footer { height: auto; padding: 10px 0; }
+    .footer-flex-container { flex-direction: column; gap: 8px; }
+    .footer-side { text-align: center !important; }
+}
+
+
