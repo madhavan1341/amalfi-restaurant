@@ -18,8 +18,7 @@ function openFullMenu() {
     const overlay = document.getElementById("fullMenuOverlay");
     if(overlay) {
         overlay.style.display = "block";
-        // Kundaipa delay venum transition trigger aaga
-        setTimeout(() => {
+       setTimeout(() => {
             overlay.classList.add('active');
         }, 50);
     }
@@ -29,7 +28,7 @@ function closeFullMenu() {
     const overlay = document.getElementById("fullMenuOverlay");
     if(overlay) {
         overlay.classList.remove('active');
-        // Animation mudinjadhum hide pannanum
+       
         setTimeout(() => {
             overlay.style.display = "none";
         }, 600);
@@ -61,7 +60,7 @@ function closeSidesMenu() {
     }, 600);
 }
 
-// Unga existing Antipasti functions-ah idhu disturb pannadhu
+
 // Soup Menu Logic
 function openSoupMenu() {
     const overlay = document.getElementById("soupMenuOverlay");
@@ -215,7 +214,7 @@ function updateCartBar() {
     const cartBar = document.getElementById("cartBar");
     const cartSummary = document.getElementById("cartSummary");
 
-    // இங்க 'cartBar' இருக்கான்னு செக் பண்றது ரொம்ப முக்கியம்
+  
     if (cartBar && cartSummary) {
         if (totalItems > 0) {
             cartBar.style.display = "block"; 
@@ -227,7 +226,7 @@ function updateCartBar() {
 }
 
 function cancelCart() {
-    // Confirm box வேணும்னா வச்சுக்கலாம் இல்லனா இப்படியே விடலாம்
+    
     if(confirm("Are you sure you want to clear the cart?")) {
         cart = {}; 
         document.getElementById("cartBar").style.display = "none";
@@ -299,3 +298,45 @@ if (matrixArea) {
     });
     matrixArea.addEventListener('click', createStarDust);
 }
+
+
+
+
+
+document.addEventListener('DOMContentLoaded', () => {
+    const brandLink = document.getElementById('matrix-brand-hover');
+    const glitterBox = document.getElementById('glitter-container');
+    let dustInterval;
+
+    function createDust() {
+        const colors = ['#FF0000', '#FFFFFF', '#FF8888'];
+        for (let i = 0; i < 6; i++) {
+            const dust = document.createElement('div');
+            dust.className = 'star-dust';
+            dust.style.backgroundColor = colors[Math.floor(Math.random() * colors.length)];
+            
+            const x = (Math.random() - 0.5) * 80 + 'px';
+            const y = (Math.random() - 0.5) * 80 + 'px';
+            dust.style.setProperty('--x', x);
+            dust.style.setProperty('--y', y);
+            
+            dust.style.left = '50%';
+            dust.style.top = '50%';
+            
+            glitterBox.appendChild(dust);
+            setTimeout(() => dust.remove(), 1000);
+        }
+    }
+
+    if(brandLink) {
+        brandLink.addEventListener('mouseenter', () => {
+            dustInterval = setInterval(createDust, 150);
+        });
+
+        brandLink.addEventListener('mouseleave', () => {
+            clearInterval(dustInterval);
+        });
+
+        brandLink.addEventListener('click', createDust);
+    }
+});
